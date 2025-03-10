@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Learn Javascript</title>
+
+    <script>
+        //code one
+        document.getElementById("el").style.color="red"; //this code not work because compiler read code line by line ,in this case compiler read style of element but not found it 
+    </script>
+     <script>
+        //code two
+        window.onload = function(){
+            document.getElementById("el").style.color="red"; // this code work because page reload all elements then start to style that element
+        }
+    </script>
+</head>
+<body>
+
+    <h1 id="el">Page Title</h1>
+
+    <script>
+        //code three
+        document.getElementById("el").style.color="red"; // this code work because the script tag is written at the end of the page and the last thing in the body element
+    </script>
+</body>
+</html>
